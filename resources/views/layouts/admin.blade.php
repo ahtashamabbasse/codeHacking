@@ -7,13 +7,13 @@
 		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}} " />
+		<link rel="stylesheet" href="{{asset('font-awesome/4.5.0/css/font-awesome.min.css')}}" />
 		<!-- page specific plugin styles -->
 		<!-- text fonts -->
-		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="{{asset('css/fonts.googleapis.com.css')}}" />
 		<!-- ace styles -->
-		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style"/>
+		<link rel="stylesheet" href="{{asset('css/ace.min.css')}}" class="ace-main-stylesheet" id="main-ace-style"/>
 	</head>
 	<body class="no-skin">
 		<div id="navbar" class="navbar navbar-default          ace-save-state">
@@ -41,7 +41,7 @@
 					<ul class="nav ace-nav">
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="" alt="" />
 								<span class="user-info">
 									<small>Welcome,</small>
 									Ahtasham
@@ -81,14 +81,7 @@
 		</div>
 
 		<div class="main-container ace-save-state" id="main-container">
-			<script type="text/javascript">
-				try{ace.settings.loadState('main-container')}catch(e){}
-			</script>
-
-			<div id="sidebar" class="sidebar                  responsive                    ace-save-state">
-				<script type="text/javascript">
-					try{ace.settings.loadState('sidebar')}catch(e){}
-				</script>
+			<div id="sidebar" class="sidebar responsive ace-save-state">
 				<ul class="nav nav-list">
 					<li class="active">
 						<a href="index.html">
@@ -100,7 +93,7 @@
 					</li>
 					
 
-					<li class="">
+					<li >
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-file-o"></i>
 
@@ -127,6 +120,34 @@
 								<a href="error-500.html">
 									<i class="menu-icon fa fa-caret-right"></i>
 									View Posts
+								</a>
+								<b class="arrow"></b>
+							</li>
+						</ul>
+
+					</li>
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-file-o"></i>
+
+							<span class="menu-text">
+								Users
+							</span>
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+						<b class="arrow"></b>
+						<ul class="submenu">
+							<li class="">
+								<a href="error-404.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Insert Users
+								</a>
+								<b class="arrow"></b>
+							</li>
+							<li class="">
+								<a href="error-500.html">
+									<i class="menu-icon fa fa-caret-right"></i>
+									View Users
 								</a>
 								<b class="arrow"></b>
 							</li>
@@ -170,7 +191,7 @@
 					<div class="page-content">
 						<div class="page-header">
 							<h1>
-								Dashboard
+								@yield('title')
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
 									overview &amp; stats
@@ -181,8 +202,7 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
-								
-
+								@yield('content')
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
 						</div><!-- /.row -->
@@ -220,10 +240,10 @@
 				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 			</a>
 		</div><!-- /.main-container -->
-		<script src="assets/js/jquery-2.1.4.min.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="{{asset('js/jquery-2.1.4.min.js')}}"></script>
+		<script src="{{asset('js/bootstrap.min.js')}}"></script>
 		<!-- ace scripts -->
-		<script src="assets/js/ace-elements.min.js"></script>
-		<script src="assets/js/ace.min.js"></script>
+		<script src="{{asset('js/ace-elements.min.js')}}"></script>
+		<script src="{{asset('js/ace.min.js')}}"></script>
 	</body>
 </html>
