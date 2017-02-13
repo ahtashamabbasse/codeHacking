@@ -57,7 +57,7 @@
             </div>
     </div>
     <div class="form-group {{$errors->has('name')?'has-error':''}}">
-                    {!! Form::label("Photo","Photo: ",["class"=>"col-sm-3 control-label no-padding-right"]) !!}
+                    {!! Form::label("photo_id","Photo: ",["class"=>"col-sm-3 control-label no-padding-right"]) !!}
                     <div class="col-sm-9">
                         {!! Form::file('photo_id',['class'=>"col-xs-10 col-sm-5","Placeholder"=>"Enter User Name" ,"required"=>"required"]) !!}
                         <span class="help-block">{{$errors->first("photo")}}</span>

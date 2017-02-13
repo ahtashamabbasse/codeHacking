@@ -91,9 +91,9 @@
 
 						<b class="arrow"></b>
 					</li>
-					<li class="{{ Request::is( 'admin/user/*') ? 'active open' : '' }}">
+					<li class="{{ Request::path( 'admin/user') ? 'active open' : '' }}">
 						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-file-o"></i>
+							<i class="menu-icon fa fa-user"></i>
 
 							<span class="menu-text">
 								Users
@@ -101,16 +101,16 @@
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
 						<b class="arrow"></b>
-						<ul class="submenu">
+						<ul class="submenu ">
 							<li class="{{ Request::is( 'admin/user/create') ? 'active' : '' }}">
-								<a href="#">
+								<a href="{{route("admin.user.create")}}">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Create Users
 								</a>
 								<b class="arrow"></b>
 							</li>
 							<li class="{{ Request::is( 'admin/user') ? 'active' : '' }}">
-								<a href="#">
+								<a href="{{route("admin.user.index")}}">
 									<i class="menu-icon fa fa-caret-right"></i>
 									View Users
 								</a>
@@ -134,7 +134,7 @@
 
 						<ul class="submenu">
 							<li class="">
-								<a href="error-404.html">
+								<a href="">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Insert Posts
 								</a>
@@ -143,7 +143,7 @@
 							</li>
 
 							<li class="">
-								<a href="error-500.html">
+								<a href="">
 									<i class="menu-icon fa fa-caret-right"></i>
 									View Posts
 								</a>
@@ -165,14 +165,14 @@
 						<b class="arrow"></b>
 						<ul class="submenu">
 							<li class="">
-								<a href="error-404.html">
+								<a href="">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Insert Category
 								</a>
 								<b class="arrow"></b>
 							</li>
 							<li class="">
-								<a href="error-500.html">
+								<a href="">
 									<i class="menu-icon fa fa-caret-right"></i>
 									View Category
 								</a>
