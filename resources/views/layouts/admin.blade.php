@@ -83,7 +83,7 @@
 		<div class="main-container ace-save-state" id="main-container">
 			<div id="sidebar" class="sidebar responsive ace-save-state">
 				<ul class="nav nav-list">
-					<li class="active">
+					<li class="">
 						<a href="index.html">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> Dashboard </span>
@@ -91,9 +91,35 @@
 
 						<b class="arrow"></b>
 					</li>
-					
+					<li class="{{ Request::is( 'admin/user/*') ? 'active open' : '' }}">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-file-o"></i>
 
-					<li >
+							<span class="menu-text">
+								Users
+							</span>
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+						<b class="arrow"></b>
+						<ul class="submenu">
+							<li class="{{ Request::is( 'admin/user/create') ? 'active' : '' }}">
+								<a href="#">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Create Users
+								</a>
+								<b class="arrow"></b>
+							</li>
+							<li class="{{ Request::is( 'admin/user') ? 'active' : '' }}">
+								<a href="#">
+									<i class="menu-icon fa fa-caret-right"></i>
+									View Users
+								</a>
+								<b class="arrow"></b>
+							</li>
+						</ul>
+					</li>
+
+					<li class="{{ Request::is( 'admin/Post') ? 'active' : '' }}">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-file-o"></i>
 
@@ -126,12 +152,13 @@
 						</ul>
 
 					</li>
+
 					<li class="">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-file-o"></i>
 
 							<span class="menu-text">
-								Users
+								Categories
 							</span>
 							<b class="arrow fa fa-angle-down"></b>
 						</a>
@@ -140,41 +167,14 @@
 							<li class="">
 								<a href="error-404.html">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Insert Users
+									Insert Category
 								</a>
 								<b class="arrow"></b>
 							</li>
 							<li class="">
 								<a href="error-500.html">
 									<i class="menu-icon fa fa-caret-right"></i>
-									View Users
-								</a>
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-file-o"></i>
-
-							<span class="menu-text">
-								Users
-							</span>
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-						<b class="arrow"></b>
-						<ul class="submenu">
-							<li class="">
-								<a href="error-404.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Insert Users
-								</a>
-								<b class="arrow"></b>
-							</li>
-							<li class="">
-								<a href="error-500.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									View Users
+									View Category
 								</a>
 								<b class="arrow"></b>
 							</li>
@@ -194,7 +194,7 @@
 								@yield('title')
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
-									overview &amp; stats
+									@yield('subDesc')
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
@@ -214,8 +214,8 @@
 				<div class="footer-inner">
 					<div class="footer-content">
 						<span class="bigger-120">
-							<span class="blue bolder">Ace</span>
-							Application &copy; 2013-2014
+							<span class="blue bolder">Code Hacking</span>
+							Application &copy; 2017-2018
 						</span>
 
 						&nbsp; &nbsp;

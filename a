@@ -1,0 +1,17 @@
+[33mcommit df5b0f636f88dee68cd05b100176f5b886f51c15[m
+Author: Ahtasham <ch.ahtasham123@gmail.com>
+Date:   Mon Feb 13 10:55:30 2017 +0500
+
+    After Adding theme in project
+
+[33mcommit d92bf4151e49cbc8aecea3b0fdffe01aef7a0680[m
+Author: Ahtasham <ch.ahtasham123@gmail.com>
+Date:   Sun Feb 12 11:50:38 2017 +0500
+
+    Creating adminUserController and setting up view
+
+[33mcommit 9a771404586aae38070e7eb6aa6f9d1881043d1c[m
+Author: Ahtasham <ch.ahtasham123@gmail.com>
+Date:   Sat Feb 11 17:02:41 2017 +0500
+
+    Created views(Admin,Auth,User,Post,Categories),migrations
