@@ -6,7 +6,7 @@
     View All the List of Users
 @endsection
 @section('content')
-    <table class="table table-responsive table-bordered">
+    <table class="table table-responsive ">
             <thead>
             <tr>
                 <th>S.No</th>
@@ -33,7 +33,7 @@
             </tr>
             @empty
                 <tr>
-                    <td colspan="5"><h2 class="alert alert-info">No User Is Register</h2></td>
+                    <td colspan="7"><h2 class="alert alert-info">No User Is Register</h2></td>
                 </tr>
             @endforelse
 
