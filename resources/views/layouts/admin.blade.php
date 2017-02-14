@@ -91,7 +91,7 @@
 
 						<b class="arrow"></b>
 					</li>
-					<li class="{{ Request::path( 'admin/user') ? 'active open' : '' }}">
+					<li class="{{ Request::is( 'admin/user') ? 'active open' : '' }}">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-user"></i>
 
@@ -119,7 +119,7 @@
 						</ul>
 					</li>
 
-					<li class="{{ Request::is( 'admin/Post') ? 'active' : '' }}">
+					<li class="{{ Request::is( 'admin/post') ? 'active open' : '' }}">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-file-o"></i>
 
@@ -133,17 +133,17 @@
 						<b class="arrow"></b>
 
 						<ul class="submenu">
-							<li class="">
-								<a href="">
+							<li class="{{ Request::is( 'admin/post/create') ? 'active' : '' }}">
+								<a href="{{route("admin.post.create")}}">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Insert Posts
+									Create Posts
 								</a>
 
 								<b class="arrow"></b>
 							</li>
 
-							<li class="">
-								<a href="">
+							<li class="{{ Request::is( 'admin/post') ? 'active' : '' }}">
+								<a href="{{route("admin.post.index")}}">
 									<i class="menu-icon fa fa-caret-right"></i>
 									View Posts
 								</a>
