@@ -28,7 +28,7 @@ class UserRequest extends Request
             "email"=>"required|email|unique:users",
             "password"=>"required|confirmed|min:6",
             "role_id"=>"required",
-            "status"=>"required"
+            "is_active"=>"required"
             //
         ];
     }

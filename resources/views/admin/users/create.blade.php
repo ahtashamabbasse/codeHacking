@@ -50,9 +50,9 @@
     </div>
 
     <div class="form-group {{$errors->has('status')?'has-error':''}}">
-            {!! Form::label("status","Status : ",["class"=>"col-sm-3 control-label no-padding-right"]) !!}
+            {!! Form::label("is_active","Status : ",["class"=>"col-sm-3 control-label no-padding-right"]) !!}
             <div class="col-sm-9">
-                {!! Form::select('status',[""=>"Select Status","0"=>"Not Active","1"=>"Active"],0,['class'=>"col-xs-10 col-sm-5","Placeholder"=>"Name" ,"required"=>"required"]) !!}
+                {!! Form::select('is_active',[""=>"Select Status","0"=>"Not Active","1"=>"Active"],0,['class'=>"col-xs-10 col-sm-5","Placeholder"=>"Name" ,"required"=>"required"]) !!}
                 <span class="help-block">{{$errors->first("status")}}</span>
             </div>
     </div>

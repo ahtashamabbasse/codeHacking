@@ -6,10 +6,21 @@
     View All the List of Users
 @endsection
 @section('content')
+    @if(Session::has('noty'))
+    <div class="alert alert-{{Session('class')}}">
+        <button type="button" class="close" data-dismiss="alert">
+            <i class="ace-icon fa fa-times"></i>
+        </button>
+        <strong>{{Session('heading')}}</strong>
+        {{Session("noty")}}
+        <br>
+    </div>
+    @endif
     <table class="table table-responsive ">
             <thead>
             <tr>
                 <th>S.No</th>
+                <th>Photo</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Role</th>
@@ -24,7 +35,8 @@
             @forelse($users as $user)
             <tr>
                 <td>{{$i++}}</td>
-                <td>{{$user->name}}</td>
+                <td><img src="{{$user->photo ? $user->photo->photo:""}}" width="50" class="img-thumbnail" alt="{{$user->name}}'s Photo "></td>
+                <td><a href="{{route('admin.user.edit',$user->id)}}">{{$user->name}}</a></td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->role->name}}</td>
                 <td ><span class="label label-sm label-{{$user->is_active == 1?"success":"danger"}}">{{$user->is_active == 1?"Active":"Not Active"}}</span></td>
