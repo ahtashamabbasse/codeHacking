@@ -29,7 +29,7 @@
             <div class="form-group {{$errors->has('password')?'has-error':''}}">
                 {!! Form::label("name","Passwords : ",["class"=>"col-sm-3 control-label no-padding-right"]) !!}
                 <div class="col-sm-9">
-                    {!! Form::password('password',["type"=>"password",'class'=>"col-xs-10 col-sm-5","Placeholder"=>"Enter the Password"]) !!}
+                    {!! Form::password('password',["type"=>"password",'class'=>"col-xs-10 col-sm-5","Placeholder"=>"Enter the Password","required"=>"required"]) !!}
                     <span class="help-block">{{$errors->first("password")}}</span>
                 </div>
             </div>
@@ -37,7 +37,7 @@
             <div class="form-group {{$errors->has('password')?'has-error':''}}">
                 {!! Form::label("password_confirmation","Confirm Password : ",["class"=>"col-sm-3 control-label no-padding-right"]) !!}
                 <div class="col-sm-9">
-                    {!! Form::password('password_confirmation',['class'=>"col-xs-10 col-sm-5","Placeholder"=>"Enter the Confirm Password" ,]) !!}
+                    {!! Form::password('password_confirmation',['class'=>"col-xs-10 col-sm-5","Placeholder"=>"Enter the Confirm Password" ,"required"=>"required"]) !!}
                     <span class="help-block">{{$errors->first("password")}}</span>
                 </div>
             </div>
