@@ -37,7 +37,7 @@
             <td>{{$post->user->name}}</td>
             <td><img src="{{$post->photo?$post->photo->photo:"/images/placeholder.png"}}" class="img-thumbnail" width="60px" height="60px" alt="Post photo"></td>
             <td>{{$post->title}}</td>
-            <td>{{$post->category_id}}</td>
+            <td>{{$post->category?$post->category->name:"Uncategorize"}}</td>
             <td>{{$post->created_at->diffForHumans()}}</td>
             <td>{{$post->updated_at->diffForHumans()}}</td>
         </tr>

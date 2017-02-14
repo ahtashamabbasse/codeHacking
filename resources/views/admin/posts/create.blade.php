@@ -20,7 +20,7 @@
     <div class="form-group {{$errors->has('category_id')?'has-error':''}}">
         {!! Form::label("category_id","Category : ",["class"=>"col-sm-3 control-label no-padding-right"]) !!}
         <div class="col-sm-9">
-            {!! Form::select('category_id',[''=>"Option",'1'=>"all"],null,['class'=>"col-xs-10 col-sm-5","Placeholder"=>"Enter an Email Address"]) !!}
+            {!! Form::select('category_id',[''=>"Chose Option"]+$cats,null,['class'=>"col-xs-10 col-sm-5","Placeholder"=>"Enter an Email Address"]) !!}
             <span class="help-block">{{$errors->first("category_id")}}</span>
         </div>
     </div>
